@@ -4,7 +4,7 @@
 
 In this project I decided to use mui material - a library of React UI. I was able to learn how to use the UI library and adapt it for adding my personal touch.
 
-[screen-capture.webm](https://user-images.githubusercontent.com/59369034/224924471-d5d0ae67-10a6-4e0f-b50c-b63ccb857938.webm|width=100)
+[screen-capture.webm](https://user-images.githubusercontent.com/59369034/224955888-ee976875-98cd-403e-8f50-43e2909f80ce.webm|width=100)
 
 ## Built with
 
