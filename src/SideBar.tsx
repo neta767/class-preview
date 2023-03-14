@@ -59,7 +59,10 @@ export default function SideBar() {
   const [participantsList, setParticipantsList] = useState<participantType[]>(
     []
   );
-
+  /**
+   * update participants with the selected client
+   * @param event
+   */
   const handleSelectedClient = (event: SelectChangeEvent) => {
     const student: studentType = studentsList[parseInt(event.target.value)];
     setParticipantsList((prev) => [
@@ -67,7 +70,10 @@ export default function SideBar() {
       { img: student.img, name: student.name, status: false },
     ]);
   };
-
+  /**
+   * update participant states
+   * @param index
+   */
   const handleCheckIn = (index: number) => {
     setParticipantsList((prev) => [
       ...prev.slice(0, index),
@@ -75,7 +81,10 @@ export default function SideBar() {
       ...prev.slice(index + 1),
     ]);
   };
-
+  /**
+   * delete participant
+   * @param index
+   */
   const handleDelete = (index: number) => {
     setParticipantsList((prev) => [
       ...prev.slice(0, index),
@@ -144,7 +153,7 @@ export default function SideBar() {
             <Typography sx={{ fontSize: 15, marginTop: 1, fontWeight: "bold" }}>
               {e.text}
             </Typography>
-            <Typography sx={{ fontSize: 10, color: "grey" }}>
+            <Typography sx={{ fontSize: 12.5, color: "grey" }}>
               {e.subtext}
             </Typography>
           </ListItem>
@@ -156,7 +165,7 @@ export default function SideBar() {
         <Typography gutterBottom sx={{ fontWeight: "bold" }}>
           You Should Know...
         </Typography>
-        <Typography sx={{ fontSize: 10 }}>
+        <Typography sx={{ fontSize: 12.5 }}>
           Dagan & Eden which participates in the class have a debt
         </Typography>
       </Box>
