@@ -1,7 +1,7 @@
 # Class Preview
 
 ### Cool sidebar React component with ability to add clients and update their status.
-In this project I decided to use mui material - a library of React UI. I was able to learn how to the UI library and adapted it for adding my personal touch.
+In this project I decided to use mui material - a library of React UI. I was able to learn how to use the UI library and adapt it for adding my personal touch.
 
 [screen-capture.webm](https://user-images.githubusercontent.com/59369034/224924471-d5d0ae67-10a6-4e0f-b50c-b63ccb857938.webm|width=100)
 
