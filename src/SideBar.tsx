@@ -68,11 +68,17 @@ export default function SideBar() {
     ]);
   };
 
-  const handleCheckIn = (event: any) => {
-    const index = parseInt(event.target.value);
+  const handleCheckIn = (index: number) => {
     setParticipantsList((prev) => [
       ...prev.slice(0, index),
       { ...prev[index], status: !prev[index].status },
+      ...prev.slice(index + 1),
+    ]);
+  };
+
+  const handleDelete = (index: number) => {
+    setParticipantsList((prev) => [
+      ...prev.slice(0, index),
       ...prev.slice(index + 1),
     ]);
   };
@@ -217,7 +223,7 @@ export default function SideBar() {
                   {e.status ? (
                     <Button
                       value={index}
-                      onClick={handleCheckIn}
+                      onClick={() => handleCheckIn(index)}
                       variant="outlined"
                       sx={{
                         p: "0.3vw",
@@ -230,7 +236,7 @@ export default function SideBar() {
                   ) : (
                     <Button
                       value={index}
-                      onClick={handleCheckIn}
+                      onClick={() => handleCheckIn(index)}
                       variant="contained"
                       sx={{
                         p: "0.3vw",
@@ -247,7 +253,7 @@ export default function SideBar() {
                   <IconButton>
                     <WhatsAppIcon sx={{ color: "green" }} />
                   </IconButton>
-                  <IconButton>
+                  <IconButton onClick={() => handleDelete(index)}>
                     <DeleteOutlineOutlinedIcon sx={{ color: "red" }} />
                   </IconButton>
                 </TableCell>
